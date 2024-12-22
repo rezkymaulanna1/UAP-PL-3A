@@ -1,41 +1,20 @@
-Program: Manajemen Keuangan Pribadi
-Fungsi Utama:
+Program ini adalah aplikasi sederhana untuk mencatat manajemen keuangan pribadi menggunakan Java Swing. Fitur utama:
 
-Memasukkan data transaksi (nama, jenis, jumlah) melalui input field.
-Menampilkan data dalam tabel.
-Komponen Utama:
-
-Input Panel:
-Menggunakan JLabel dan JTextField untuk menerima input.
-Tombol Tambah Data untuk memproses input.
-Tabel:
-JTable untuk menampilkan data transaksi.
-Data diatur menggunakan DefaultTableModel.
-Validasi:
-
-Semua field harus diisi.
+Input Data:
+Masukkan nama transaksi, jenis transaksi (Pemasukan/Pengeluaran), dan jumlah melalui input field.
+Tabel Data:
+Data transaksi yang dimasukkan akan ditampilkan di tabel.
+Validasi Input:
+Semua field wajib diisi.
 Jumlah harus berupa angka.
-Event Tombol:
-
-Menambahkan data ke tabel jika valid.
-Menampilkan pesan error jika input tidak sesuai.
-Perubahan Contoh:
-Menambah Validasi Jenis Transaksi:
-
-java
-Copy code
-if (!jenis.equalsIgnoreCase("Pemasukan") && !jenis.equalsIgnoreCase("Pengeluaran")) {
-    JOptionPane.showMessageDialog(frame, "Jenis harus 'Pemasukan' atau 'Pengeluaran'!");
-    return;
-}
-Efek: Memastikan jenis transaksi valid.
-
-Tabel Tidak Dapat Diedit:
-
-java
-Copy code
-JTable table = new JTable(tableModel) {
-    public boolean isCellEditable(int row, int column) { return false; }
-};
-Efek: Data hanya bisa diubah melalui input, bukan tabel langsung.
+Cara Menggunakan Program
+Jalankan program.
+Isi kolom:
+Nama Transaksi: Nama aktivitas (contoh: Gaji, Belanja).
+Jenis Transaksi: Pemasukan atau Pengeluaran.
+Jumlah: Nominal transaksi.
+Klik tombol Tambah Data.
+Data akan ditambahkan ke tabel di bawah jika input valid.
+Jika ada error:
+Pesan akan muncul (misalnya, jika jumlah bukan angka atau field kosong).
 
